@@ -1,0 +1,36 @@
+<div class="row">
+
+    <section class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header  text-white bg-secondary">
+                Add Contact
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" [(ngModel)]="contactObj.name" name="name" id="name" aria-describedby="helpId"
+                                    placeholder="Enter Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" [(ngModel)]="contactObj.mobile" name="mobile" id="mobile" aria-describedby="helpId"
+                                    placeholder="Enter Number">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" (click)="SaveContact()" name="" id="" class="btn btn-primary">Save!</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-muted">
+
+            </div>
+        </div>
+    </section>
+
+</div>
+<app-list [data]="contactObj.obj"></app-list>
